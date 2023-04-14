@@ -31,6 +31,34 @@ int main()
         {
             printf("Your triangle is Isosceles!");
         }
+
+        int hypotenuse = (int)fmax(fmax(side_1, side_2), side_3);
+        int a, b;
+
+        if (hypotenuse == (int)side_1)
+        {
+            a = (int)side_2;
+            b = (int)side_3;
+        }
+        else if (hypotenuse == (int)side_2)
+        {
+            a = (int)side_1;
+            b = (int)side_3;
+        }
+        else
+        {
+            a = (int)side_2;
+            b = (int)side_3;
+        }
+
+        if (hypotenuse * hypotenuse == a * a + b * b)
+        {
+            printf("And your triangle is a right triangle too!");
+        }
+        else
+        {
+            printf("But your triangle is not a right one :(");
+        }
     }
     else
     {
