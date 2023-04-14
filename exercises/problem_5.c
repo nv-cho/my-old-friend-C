@@ -10,31 +10,22 @@ int main()
 
     if (side_1 < 0 || side_1 == 0 || side_2 < 0 || side_2 == 0 || side_3 < 0 || side_3 == 0)
     {
-        fprintf(stderr, "Error: Only positives (zero not included) values accepted");
+        printf("Error: Only positives (zero not included) values accepted");
 
         return 1;
     }
 
-    if ((side_1 + side_2) > side_3 || (side_1 + side_3) > side_2 || (side_2 + side_3) > side_1)
+    if (side_1 == side_2 && side_1 == side_3 && side_2 == side_3)
     {
-        if (side_1 == side_2 && side_1 == side_3 && side_2 == side_3)
-        {
-            printf("Your triangle is Equilateral!");
-        }
-        else if (side_1 != side_2 && side_1 != side_3 && side_2 != side_3)
-        {
-            printf("Your triangle is Scalene!");
-        }
-        else
-        {
-            printf("Your triangle is Isosceles!");
-        }
+        printf("Your triangle is Equilateral!");
+    }
+    else if (side_1 != side_2 && side_1 != side_3 && side_2 != side_3)
+    {
+        printf("Your triangle is Scalene!");
     }
     else
     {
-        fprintf(stderr, "Error: The sides entered do not form a valid triangle");
-
-        return 1;
+        printf("Your triangle is Isosceles!");
     }
 
     return 0;
