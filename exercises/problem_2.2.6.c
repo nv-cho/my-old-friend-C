@@ -3,19 +3,19 @@
 int main()
 {
 
-    int day_of_the_day;
+    int day;
 
     printf("Enter the number of your favorite day of the week (ex Monday = 1): ");
-    scanf("%d", &day_of_the_day);
+    scanf("%d", &day);
 
-    if (day_of_the_day > 7 || day_of_the_day < 1)
+    if (day > 7 || day < 1)
     {
         fprintf(stderr, "Error: Unless you're living in another planet, your number is out of range...");
 
         return 1;
     }
 
-    switch (day_of_the_day)
+    switch (day)
     {
     case 1:
         printf("Monday!");
