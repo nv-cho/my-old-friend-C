@@ -25,7 +25,7 @@ int main()
     }
     else
     {
-        fprintf(stderr, "Error: The sides entered do not form a valid triangle");
+        printf("Error: The sides entered do not form a valid triangle");
 
         return 1;
     }
