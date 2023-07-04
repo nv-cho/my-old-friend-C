@@ -1,0 +1,32 @@
+== Parcial de 2018 ==
+
+=== Preguntas Teóricas ===
+
+  - Explique la diferencia entre la dirección y el contenido de una variable.
+  - Explique qué es un vector en C ¿Y una matriz?
+  - ¿Cuál es la diferencia entre un archivo .o  y un archivo .c? Ej: miprog.o y miprog.c
+  - Explique como funcionan los permisos para archivos y directorios en Linux
+
+=== Parte Práctica ===
+
+1. Dado el siguiente prototipo:
+
+<code>
+void minmay(int *vec, int tam, int lim);
+</code>
+
+Escribir una función que tome el vector de enteros (vec), su tamaño (tam) y un valor límite (lim). La función deberá indicar cuántos valores dentro del vector están por arriba del límite y cuantos están por debajo de el. Deberá informar estos resultados por pantalla.
+
+2. Escribir un programa que recibe por línea de comando como parámetro una cadena. Una vez en funcionamiento el programa pedirá al usuario ingresar 10 frases (de tamaño máximo 1024 caracteres). El programa imprimirá por pantalla estas frases, pero antes de hacerlo reemplazará las cadenas indicadas por línea de comando con tantas X como caracteres posea la palabra que se pasó como parámetro.
+
+3. Escribir una función que recibe un vector de 1024 bytes con una cadena (de estilo C). Esta función deberá devolver un nuevo vector con una copia de la cadena ingresada. Pero el vector devuelto debe tener solamente el tamaño necesario para alojar la cadena.
+
+4. Realizar un función con prototipo:
+
+<code>
+unsigned int my_streq (char *str1, char *str2);
+</code>
+
+Esta función deberá determinar si la primer cadena es igual a la segunda. Si son iguales retornará verdadero y si son distintas puede retornar falso.
+
+5. Escribir un programa que tome por línea de comando la cantidad de enteros que va a pedirle al usuario. El programa deberá reservar la memoria necesaria para guardarlos y luego pedirle al usuario que ingrese estos enteros de a uno. Una vez finalizado el ingreso el programa calculará el valor medio de los enteros ingresados y lo presentará por pantalla.
