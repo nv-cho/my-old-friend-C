@@ -9,3 +9,4 @@ void controlar_medidas();
 void en_reversa(char *string, char *reversed_string_placeholder);
 int cuantas_veces(char *string, char character, int *counter_placeholder);
 int es_palindromo(char *string);
+void contador_de_palindromos(char **array_of_words);

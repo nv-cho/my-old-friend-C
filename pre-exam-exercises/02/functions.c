@@ -141,3 +141,27 @@ int es_palindromo(char *string)
 
     free(reversed_string);
 }
+
+void contador_de_palindromos(char **array_of_words)
+{
+    if (array_of_words == NULL)
+    {
+        return ERROR;
+    }
+
+    int iterator = 0, counter = 0;
+
+    while (array_of_words[iterator] != NULL)
+    {
+        if (es_palindromo(array_of_words[iterator]) == TRUE)
+        {
+            counter++;
+        }
+
+        iterator++;
+    }
+
+    float percentage_of_palindromes = ((float)counter / (iterator - 1)) * 100;
+
+    printf("The number of word entered is %d, and the percentage of words that are palindromes is %.2f%% \n", iterator - 1, percentage_of_palindromes);
+}
