@@ -1,4 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 #include "functions.h"
 
 int obtener_mayores(int *vector, int length, int max_number)
@@ -67,4 +70,74 @@ void controlar_medidas()
     printf("%d number of numbers are over the limit", answer);
 
     free(number_list);
+}
+
+int cuantas_veces(char *string, char character, int *counter_placeholder)
+{
+    if (string == NULL || counter_placeholder == NULL)
+    {
+        return ERROR;
+    }
+
+    int iterator, counter = 0;
+
+    for (iterator = 0; string[iterator] != '\0'; iterator++)
+    {
+        if (string[iterator] == character)
+        {
+            counter++;
+        }
+    }
+
+    *counter_placeholder = counter;
+
+    return counter;
+}
+
+void en_reversa(char *string, char *reversed_string_placeholder)
+{
+    if (string == NULL || reversed_string_placeholder == NULL)
+    {
+        return ERROR;
+    }
+
+    int iterator, string_length = strlen(string), end_of_string = string_length - 1;
+
+    for (iterator = 0; iterator < string_length; iterator++)
+    {
+        reversed_string_placeholder[iterator] = string[end_of_string];
+
+        end_of_string--;
+    }
+
+    reversed_string_placeholder[string_length] = '\0';
+}
+
+int es_palindromo(char *string)
+{
+    int iterator;
+    char *reversed_string = malloc((strlen(string) + 1) * sizeof(char));
+
+    if (string == NULL || reversed_string == NULL)
+    {
+        return ERROR;
+    }
+
+    for (iterator = 0; string[iterator] != '\0'; iterator++)
+    {
+        string[iterator] = tolower((unsigned char)string[iterator]);
+    }
+
+    en_reversa(string, reversed_string);
+
+    if (strcmp(string, reversed_string) == 0)
+    {
+        return TRUE;
+    }
+    else
+    {
+        return FALSE;
+    }
+
+    free(reversed_string);
 }
