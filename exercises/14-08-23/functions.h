@@ -1,6 +1,6 @@
 #define NOMBRE_CANT 32
 #define APELLIDO_CANT 32
-#define CANT_PERSONAS_INICIAL 5
+#define CANT_PERSONAS_INICIAL 1
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -20,3 +20,4 @@ typedef struct
 } spersona_t;
 
 spersona_t **ingreso(spersona_t **dataptr, int *cant);
+void imprimir(spersona_t **dataptr);
